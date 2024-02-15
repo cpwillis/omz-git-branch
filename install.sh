@@ -46,4 +46,12 @@ else
     echo "omz-git-branch plugin already exists in .zshrc."
 fi
 
+# Ask whether to configure additional git settings and aliases
+read -p "Would you like to configure additional useful git settings and aliases? (y/n) " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    echo "You can run ${PLUGIN_DIR}/config.sh later if you decide you want to configure additional settings."
+    exit 1
+fi
+
 echo "omz-git-branch plugin setup complete. Please restart your terminal or run 'source ~/.zshrc' to apply changes."
