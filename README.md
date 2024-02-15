@@ -15,7 +15,7 @@ Display: `9876/fix...-feature`
 To install `omz-git-branch`, you can use the following command:
 
 ```sh
-zsh -c "$(curl -fsSL https://raw.github.com/cpwillis/omz-git-branch/main/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/cpwillis/omz-git-branch/main/install.sh)"
 ```
 
 Alternatively, you can clone the repository into your `~/.oh-my-zsh/custom/plugins` directory:
