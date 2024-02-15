@@ -12,10 +12,11 @@ fi
 # Remove existing plugin directory if it exists (prompt for confirmation)
 if [[ -d "$PLUGIN_DIR" ]]; then
     echo "The omz-git-branch plugin directory already exists at $PLUGIN_DIR."
-    read -p "Do you want to remove it and proceed with the installation? (y/n) " REPLY
+    echo -n "Do you want to remove it and proceed with the installation? (y/n) "
+    read REPLY
 
     # Normalize the response to lowercase before matching for broader acceptance of user input
-    case "${REPLY,,}" in
+    case "${REPLY:l}" in
     y | yes)
         if rm -rf "$PLUGIN_DIR"; then
             echo "Existing omz-git-branch plugin directory removed successfully."
@@ -40,7 +41,7 @@ git clone https://github.com/cpwillis/omz-git-branch.git "$PLUGIN_DIR" || {
 # Add omz-git-branch plugin to .zshrc
 if ! grep -q "omz-git-branch" ~/.zshrc; then
     echo "omz-git-branch plugin added to your .zshrc file."
-    sed -i '' '/^plugins=(/s/$/ omz-git-branch/' ~/.zshrc
+    sed -i.bak '/^plugins=(/s/$/ omz-git-branch/' ~/.zshrc && rm ~/.zshrc.bak
 else
     echo "omz-git-branch plugin already exists in .zshrc."
 fi
