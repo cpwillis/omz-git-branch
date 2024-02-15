@@ -12,13 +12,17 @@ Display: `9876/fix...-feature`
 
 ## Installation
 
+### Recommened 
+
 To install `omz-git-branch`, you can use the following command:
 
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/cpwillis/omz-git-branch/main/install.sh)"
 ```
 
-Alternatively, you can clone the repository into your `~/.oh-my-zsh/custom/plugins` directory:
+### Alternative
+
+You can clone the repository into your `~/.oh-my-zsh/custom/plugins` directory:
 
 ```sh
 git clone https://github.com/cpwillis/omz-git-branch.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/omz-git-branch
@@ -30,7 +34,11 @@ After cloning, add `omz-git-branch` to your `.zshrc` plugins list:
 plugins=(... omz-git-branch)
 ```
 
-## Configuration
+### Helpers
+
+During installation, you can enhance Git with extra settings and aliases using `config.sh`. You can run this script later if you initially skip it. Plus, a predefined reset command is available for reverting to default settings.
+
+## Customisation
 
 By default, `omz-git-branch` will truncate branch names to 20 characters in total. It is designed to omit the team name prefix while ensuring the inclusion of critical identifiers like Pivotal Tracker IDs at the end.
 
