@@ -1,3 +1,4 @@
+# List of customizable variables in oh-my-zsh: https://gist.github.com/aamnah/b50b081a752f6e193f9202c2c445b740
 # Define a function named git_prompt_info
 function git_prompt_info() {
   # Check if git status should be hidden
