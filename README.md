@@ -70,7 +70,7 @@ You can customize the plugin behavior with the following `git config` commands:
 
 ## Contributing
 
-Contributions are welcome! If you'd like to improve `omz-git-branch`, please feel free to fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! If you'd like to improve `omz-git-branch`, please feel free to fork the repository, make your changes, and submit a pull request. This project was inspired by an [abandoned project](https://github.com/tnwinc/omz-git).
 
 ## License
 
