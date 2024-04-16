@@ -1,6 +1,8 @@
 # omz-git-branch Plugin
 
-This is an [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh) plugin that augments git features, designed especially for users who prefer aesthetically pleasing branch naming conventions. 
+This is an [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh) plugin that augments git features, designed especially for users who prefer aesthetically pleasing branch naming conventions.
+
+It visually formats the current git branch name or commit hash, considering customizable variables like hiding status, maximum branch length, prefix, and suffix trimming, with an option to display git status.
 
 ## Example
 
