@@ -49,18 +49,4 @@ else
     exit 1
 fi
 
-# Ask whether to configure additional git settings and aliases
-read -rp "Would you like to configure additional useful git settings and aliases? (y/n) " REPLY
-if printf "%s" "$REPLY" | grep -Eq '^[Yy]$'; then
-    if chmod +x "${PLUGIN_DIR}/config.sh" && "${PLUGIN_DIR}/config.sh"; then
-        printf "Additional git settings and aliases have been applied.\n"
-    else
-        echo "Failed to execute ${PLUGIN_DIR}/config.sh. Check the script path and permissions." >&2
-        exit 1
-    fi
-else
-    printf "You chose not to configure additional git settings and aliases.\n"
-    printf "You can run %s/config.sh later if you decide you want to configure additional settings.\n" "$PLUGIN_DIR"
-fi
-
 printf "omz-git-branch plugin setup complete. Please restart your terminal or run 'source ~/.zshrc' to apply changes.\n"
